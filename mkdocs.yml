@@ -1,0 +1,102 @@
+ site_name: Личный кабинет AP Logistics
+ site_description: Инструкция для Клиента
+ site_author: Ipiton (Elvira V.)
+
+ theme:
+  palette:
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: grey # Цвет заголовка
+      accent: # Цвет при наведении на ссылку
+      toggle:
+        icon: material/lightbulb
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: # Цвет при наведении на ссылку
+      toggle:
+        icon: material/lightbulb-outline
+        name: Switch to light mode
+  admonition:
+    <type>: <material/alert-circle>
+
+  name: material # тема оформления сайта https://squidfunk.github.io/mkdocs-material/
+  logo: bigcartel.svg
+  favicon: bigcartel.svg
+  features:
+      - navigation.tabs # перемещает навигационное меню наверх
+      - navigation.tabs.sticky # закрепляет верхнее меню
+      - navigation.top
+      - navigation.expand
+      - content.tabs.link
+      - navigation.tracking
+      - navigation.indexes
+      - toc.follow
+      - content.code.copy
+      
+ markdown_extensions:
+    - admonition # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#admonition
+    - pymdownx.details
+    - md_in_html
+    - pymdownx.blocks.caption
+    - def_list
+    - pymdownx.betterem
+    - pymdownx.blocks.caption
+    - pymdownx.caret
+    - pymdownx.keys
+    - pymdownx.mark
+    - pymdownx.tilde    
+    - pymdownx.critic
+    - abbr
+    - attr_list
+    - pymdownx.tasklist:
+        custom_checkbox: true
+    - pymdownx.arithmatex:
+        generic: true
+    - pymdownx.emoji:
+       emoji_index: !!python/name:material.extensions.emoji.twemoji
+       emoji_generator: !!python/name:material.extensions.emoji.to_svg
+    - pymdownx.highlight:
+        anchor_linenums: true
+    - pymdownx.superfences
+    - pymdownx.tabbed:
+        alternate_style: true
+    - pymdownx.snippets
+    - tables
+    - footnotes
+ 
+ 
+ plugins:
+    - search:
+        lang:
+          - ru
+    - glightbox:
+        touchNavigation: true
+        loop: false
+        effect: zoom
+        slide_effect: slide
+        width: 100%
+        height: auto
+        zoomable: true
+        draggable: true
+        skip_classes:
+          - custom-skip-class-name
+        auto_themed: false
+        auto_caption: false
+        caption_position: bottom
+        background: white
+        shadow: true
+        manual: false
+    
+ nav:
+    - Приветствуем!: index.md
+    - Начало работы:
+        - Основные шаги: start.md
+        - Работа с заявками: warehouse-request.md
+        - Запросы менеджеру: requests-manager.md
+    - О сервисе: about-service.md
+    
